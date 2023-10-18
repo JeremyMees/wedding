@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {}
+
+@layer utilities {}
+
+@layer base {
+  @font-face {
+    font-family: 'Lato';
+    src: url('@/assets/fonts/Lato-Bold.woff') format('woff');
+    font-weight: 800;
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    src: url('@/assets/fonts/Lato-Regular.woff') format('woff');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('@/assets/fonts/Inter.woff') format('woff');
+    font-weight: 400;
+  }
+
+  html {
+    @apply font-text scroll-smooth bg-background;
+  }
+
+  h1 {
+    @apply font-bold font-title text-[1.5rem] leading-[1.75rem] md:text-[1.75rem] md:leading-[2rem] lg:text-[2rem] lg:leading-[2.25rem];
+  }
+
+  h2 {
+    @apply font-bold font-title text-[1.25rem] leading-[1.5rem] md:text-[1.5rem] md:leading-[1.5rem];
+  }
+
+  h3 {
+    @apply font-bold font-title text-[1rem] leading-[1.25rem] sm:text-[1.125rem] sm:leading-[1.25rem] md:text-[1.25rem] md:leading-[1.5rem];
+  }
+
+  .body-normal {
+    @apply font-text text-[1rem] leading-[1.5rem] sm:text-[1.125rem] sm:leading-[1.5rem] md:text-[1.25rem] md:leading-[1.75rem];
+  }
+
+  .body-small {
+    @apply font-text text-[0.75rem] leading-[1.25rem] sm:text-[0.875rem] sm:leading-[1.25rem];
+  }
+}
