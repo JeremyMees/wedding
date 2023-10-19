@@ -2,6 +2,6 @@
 
 <template>
   <NuxtLayout>
-    <div>home</div>
+    <div>images</div>
   </NuxtLayout>
 </template>

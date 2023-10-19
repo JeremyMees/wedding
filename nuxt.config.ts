@@ -12,8 +12,19 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@vueuse/nuxt',
     '@nuxt/image-edge',
-    '@vite-pwa/nuxt'
+    '@vite-pwa/nuxt',
+    'nuxt-vuefire'
   ],
+  vuefire: {
+    config: {
+      apiKey: process.env.FIREBASE_KEY,
+      authDomain: process.env.FIREBASE_DOMAIN,
+      storageBucket: process.env.FIREBASE_BUCKET,
+      projectId: process.env.FIREBASE_ID_PROJECT,
+      messagingSenderId: process.env.FIREBASE_ID_SENDER,
+      appId: process.env.FIREBASE_ID_APP
+    }
+  },
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
@@ -52,6 +63,5 @@ export default defineNuxtConfig({
     viewer: false,
     exposeConfig: true
   },
-  nitro: { compressPublicAssets: true },
-  devtools: { enabled: true }
+  nitro: { compressPublicAssets: true }
 })
